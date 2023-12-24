@@ -95,6 +95,21 @@ const FolderGridLayout = ({
               clipboard.copy(handleSelectedPermalink(getBaseUrl()))
               toast.success(t('Copied selected files permalink.'))
             }}
+          >
+            <FontAwesomeIcon icon={['far', 'copy']} size="lg" />
+          </button>
+          {totalGenerating ? (
+            <Downloading title={t('Downloading selected files, refresh page to cancel')} style="p-1.5" />
+          ) : (
+            <button
+              title={t('Download selected files')}
+              className="none"
+              disabled={totalSelected === 0}
+              onClick={handleSelectedDownload}
+            >
+              <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} size="lg" />
+            </button>
+          )}
         </div>
       </div>
 
