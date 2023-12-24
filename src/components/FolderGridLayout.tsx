@@ -104,9 +104,8 @@ const FolderGridLayout = ({
             <button
               title={t('Download selected files')}
               className="cursor-pointer rounded p-1.5 hover:bg-gray-300 disabled:cursor-not-allowed disabled:text-gray-400 disabled:hover:bg-white dark:hover:bg-gray-600 disabled:dark:text-gray-600 disabled:hover:dark:bg-gray-900"
-              <button disabled={!this.state.value}
+              disabled={totalSelected === 0}
               onClick={handleSelectedDownload}
-              <input onChange={e => this.setState({ value: e.target.value })} value={this.state.value} />
             >
               <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} size="lg" />
             </button>
