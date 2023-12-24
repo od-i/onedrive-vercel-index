@@ -95,10 +95,6 @@ const FolderGridLayout = ({
               clipboard.copy(handleSelectedPermalink(getBaseUrl()))
               toast.success(t('Copied selected files permalink.'))
             }}
-          >
-              <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} size="lg" />
-            </button>
-          )}
         </div>
       </div>
 
