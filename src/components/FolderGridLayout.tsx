@@ -128,10 +128,7 @@ const FolderGridLayout = ({
                     title={t('Copy folder permalink')}
                     className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                     onClick={() => {
-                      {/* To replace the permalink of a folder. 
                       clipboard.copy(`${getBaseUrl()}${getItemPath(c.name)}`)
-                      To replace the permalink of a folder. */}
-                      clipboard.copy(`https://${host_direct}${getItemPath(c.name)}`)
                       toast(t('Copied folder permalink.'), { icon: '👌' })
                     }}
                   >
