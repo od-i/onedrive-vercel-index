@@ -38,7 +38,7 @@ module.exports = {
   // [OPTIONAL] The footer component of your website. You can write HTML here, but you need to escape double
   // quotes - changing " to \". You can write anything here, and if you like badges, generate some with https://shields.io
   footer:
-    'Copyright © 2024 • <a href="https://x.com/kiyoshisubs" target="_blank" rel="noopener noreferrer">Kiyoshi-Subs</a> | Edited with ❤ by YMrPro | <a href="mailto:imrpro@list.ru" target="_blank" rel="noopener noreferrer">Content Removal Request</a>',
+    'Copyright © 2025 • <a href="https://x.com/kiyoshisubs" target="_blank" rel="noopener noreferrer">Kiyoshi-Subs</a> | Edited with ❤ by YMrPro | <a href="mailto:imrpro@list.ru" target="_blank" rel="noopener noreferrer">Content Removal Request</a>',
 
   // [OPTIONAL] This is where you specify the folders that are password protected. It is an array of paths pointing to all
   // the directories in which you have .password set. Check the documentation for details.
@@ -53,7 +53,7 @@ module.exports = {
   links: [
     {
       name: '🚀 Website',
-      link: 'https://kiyoshiifansubs.blogspot.com/',
+      link: 'https://kiyoshii-fansubs.blogspot.com/',
     },
   ],
 
