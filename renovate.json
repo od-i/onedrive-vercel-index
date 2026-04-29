@@ -4,14 +4,58 @@
     "config:base",
     ":semanticCommits"
   ],
+  "timezone": "UTC",
+  "schedule": ["every weekend"],
   "packageRules": [
     {
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
+      "description": "Auto-merge non-breaking minor and patch updates",
+      "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
+    },
+    {
+      "description": "Group all FontAwesome updates together",
+      "matchPackagePatterns": ["^@fortawesome/"],
+      "groupName": "FontAwesome packages"
+    },
+    {
+      "description": "Group all i18n updates together — keep versions in sync",
+      "matchPackageNames": ["i18next", "next-i18next", "react-i18next", "i18next-parser"],
+      "groupName": "i18n packages",
+      "automerge": false
+    },
+    {
+      "description": "Group Next.js ecosystem — bump together to avoid peer dep conflicts",
+      "matchPackageNames": ["next", "eslint-config-next"],
+      "groupName": "Next.js ecosystem",
+      "automerge": false
+    },
+    {
+      "description": "Group React updates",
+      "matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"],
+      "groupName": "React core",
+      "automerge": false
+    },
+    {
+      "description": "Pin major version of headlessui — v2 has breaking changes",
+      "matchPackageNames": ["@headlessui/react"],
+      "allowedVersions": "^1.0.0"
+    },
+    {
+      "description": "Pin major version of react-reader — v2 has breaking API",
+      "matchPackageNames": ["react-reader"],
+      "allowedVersions": "^1.0.0"
+    },
+    {
+      "description": "Pin major version of react-markdown — v9 is async only",
+      "matchPackageNames": ["react-markdown"],
+      "allowedVersions": "^8.0.0"
+    },
+    {
+      "description": "Group Prettier and its plugins — must be updated together",
+      "matchPackageNames": ["prettier", "prettier-plugin-tailwindcss", "eslint-config-prettier"],
+      "groupName": "Prettier ecosystem",
+      "automerge": false
     }
   ]
 }
